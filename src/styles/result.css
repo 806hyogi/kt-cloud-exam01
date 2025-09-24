@@ -1,0 +1,127 @@
+.track-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    padding: 20px;
+    background: repeating-linear-gradient(to bottom,
+            #ddd,
+            #ddd 40px,
+            #bbb 40px,
+            #bbb 42px);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+}
+
+
+.cat-container {
+    position: relative; 
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.run-button {
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 25px;
+    animation: blink 4s infinite;
+}
+
+.refresh-button {
+    margin-left: 10px;
+    border: none;
+}
+
+.refresh-button:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+.back-button {
+    margin-right: 10px;
+    border: none;
+}
+
+.back-button:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+@keyframes blink {
+    0% {
+        border-color: black;
+    }
+
+    50% {
+        border-color: rgb(255, 255, 255);
+    }
+
+    100% {
+        border-color: black;
+    }
+}
+
+.run-button:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+/* run 애니매이션 동작 관련 */
+.cat {
+    width: 100px;
+    position: absolute;
+    left: 20px; /* 시작 점*/
+    transition: transform 0.3s;
+}
+
+.cat.run {
+    animation: runAcross linear forwards;
+}
+
+@keyframes runAcross {
+    from {
+        left: 0;
+    }
+    to {
+        left: calc(100% - 100px); /* 트랙 끝 까지 이동 */
+    }
+}
+
+.results {
+    border: 1px solid white;
+    margin-top: 10px;
+    width: 500px;
+    height: 200px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.winner-dialog {
+    position: fixed;
+    top: 50%;      
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(29, 29, 29);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.flower {
+    font-size: 95px;
+}
