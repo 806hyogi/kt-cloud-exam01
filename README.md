@@ -1,5 +1,6 @@
 # 🐱 고양이 달리기 프로젝트
 
+![Image](https://github.com/user-attachments/assets/6ceba8c9-48e1-477d-8742-4c0da9bf66dd)
 
 ## 주제
 고양이 달리기
